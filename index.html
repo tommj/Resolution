@@ -2,6 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <title>Resolution</title>
 <link type="text/css" href="jquery.ui/ui.dialog.css" rel="stylesheet" />
 <link type="text/css" href="jquery.ui/ui.core.css" rel="stylesheet" />
@@ -130,6 +133,7 @@ a img { border:0; }
 </div>
 <script>
 $(function () {
+   self.moveTo(0,0);self.resizeTo(screen.availWidth,screen.availHeight);
    var hourrows = document.createElement('tbody'),c = 24,h,row;
    while (c){
     

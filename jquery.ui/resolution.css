@@ -20,12 +20,15 @@ header {
     color-stop(1, rgb(189,190,192))
   )
 }
+
 time {
+  color: #939598;
   position: absolute;
   left: 183px;
   top: 20px;
 }
 header h1 {
+  color: #939598;
   display: inline-block;
   position: absolute;
   top: -12px;
@@ -56,12 +59,13 @@ header h1 {
       color-stop(0, rgb(241,241,242)),
       color-stop(1, rgb(186,228,249))
   );
-  border-top: 1px solid #E5E5E6;
-  padding: 5px;
-  -webkit-border-top-left-radius:3px;
-  -webkit-border-top-right-radius:3px;
-  -webkit-border-bottom-left-radius:3px;
-  -webkit-border-bottom-right-radius:3px;
+  border-top: 1px solid rgb(189,190,192);
+  border-left: 1px solid rgb(189,190,192);
+  padding: 5px 8px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+  -webkit-border-bottom-left-radius:5px;
+  -webkit-border-bottom-right-radius:5px;
 }
 #menu-left a.current, #menu-right a.current,#menu-left a.current:hover, #menu-right a.current:hover{
   background-image:-webkit-gradient(
@@ -87,9 +91,11 @@ header h1 {
 }
 #left{
   background: url(img/CalendarSideBox.png);
-  float: left;
+  position: absolute;
   height: 708px;
   width: 183px;
+  left: 0;
+  bottom: 0;
 }
 #calendar-month-view {
   border-spacing: 0;
