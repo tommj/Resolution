@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -13,8 +13,152 @@
 <script src="js/ui.dialog.js" language="javascript" type="text/javascript"></script>
 <script src="js/city.js" language="javascript" type="text/javascript"></script>
 <script src="js/resolution.js" language="javascript" type="text/javascript"></script>
-<script type="text/javascript">
+<style type="text/css">
+a img { border:0; }
+@font-face {
+ font-family: "Euphemia";
+ src: url(img/Euphemia_UCAS_Regular_2_6_6.ttf) format("truetype");
+}
+* {
+   font-family: "Euphemia";
+ }
+.left { float:left; }
+.trigger { cursor:pointer; }
+.bubbleInfo {
+    position:relative;
+}
+.popup {
+    position:absolute;
+    z-index:1;
+    display:none; /* keeps the popup hidden if no JS available */
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+  <header>
+    <menu id="menu-left">
+        <li><a href="#">Quit</a></li>
+        <li><a href="#">Options</a></li>
+    </menu>   
+    <time>  <script>show();</script>   </time>  
+    <h1>Resolution</h1> 
+    <menu id="menu-right">
+        <li><a class="current" href="http://eatorgraze.com/EatorGraze/Options.html">Calendar</a></li>   
+        <li><a href="http://eatorgraze.com/EatorGraze/Visions.html">Visions</a></li>   
+        <li><a href="http://eatorgraze.com/EatorGraze/Shared.html">Shared</a></li>   
+    </menu>    
+  </header>
+  <div id="left">
+    <table id="calendar-month-view">
+      <thead>
+        <tr><th colspan="7">June</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td width="14"></td>
+            <td width="14"></td>
+            <td width="14" class="days" id="day1"><span onclick="changeDay(1);">1</span></td>
+            <td width="14" class="days" id="day2"><span onclick="changeDay(2);">2</span></td>
+            <td width="14" class="days" id="day3"><span onclick="changeDay(3);">3</span></td>
+            <td width="14" class="days" id="day4"><span onclick="changeDay(4);">4</span></td>
+            <td width="14" class="days" id="day5"><span onclick="changeDay(5);">5</span></td>
+        </tr>
+        <tr>
+            <td width="14" class="days" id="day6"><span onclick="changeDay(6);">6</span></td>
+            <td width="14" class="days" id="day7"><span onclick="changeDay(7);">7</span></td>
+            <td width="14" class="days" id="day8"><span onclick="changeDay(8);">8</span></td>
+            <td width="14" class="days" id="day9"><span onclick="changeDay(9);">9</span></td>
+            <td width="14" class="days" id="day10"><span onclick="changeDay(10);">10</span></td>
+            <td width="14" class="days" id="day11"><span onclick="changeDay(11);">11</span></td>
+            <td width="14" class="days" id="day12"><span onclick="changeDay(12);">12</span></td>
+        </tr>
+        <tr>
+            <td width="14" class="days" id="day13"><span onclick="changeDay(13);">13</span></td>
+            <td width="14" class="days" id="day14"><span onclick="changeDay(14);">14</span></td>
+            <td width="14" class="days" id="day15"><span onclick="changeDay(15);">15</span></td>
+            <td width="14" class="days" id="day16"><span onclick="changeDay(16);">16</span></td>
+            <td width="14" class="days" id="day17"><span onclick="changeDay(17);">17</span></td>
+            <td width="14" class="days" id="day18"><span onclick="changeDay(18);">18</span></td>
+            <td width="14" class="days" id="day19"><span onclick="changeDay(19);">19</span></td>
+        </tr>
+        <tr>
+            <td width="14" class="days" id="day20"><span onclick="changeDay(20);">20</span></td>
+            <td width="14" class="days" id="day21"><span onclick="changeDay(21);">21</span></td>
+            <td width="14" class="days" id="day22"><span onclick="changeDay(22);">22</span></td>
+            <td width="14" class="days" id="day23"><span onclick="changeDay(23);">23</span></td>
+            <td width="14" class="days" id="day24" style="background:#FFF;"><span onclick="changeDay(24);">24</span></td>
+            <td width="14" class="days" id="day25"><span onclick="changeDay(25);">25</span></td>
+            <td width="14" class="days" id="day26"><span onclick="changeDay(26);">26</span></td>
+        </tr>
+        <tr>
+            <td width="14" class="days" id="day27"><span onclick="changeDay(27);">27</span></td>
+            <td width="14" class="days" id="day28"><span onclick="changeDay(28);">28</span></td>
+            <td width="14" class="days" id="day29"><span onclick="changeDay(29);">29</span></td>
+            <td width="14" class="days" id="day30"><span onclick="changeDay(30);">30</span></td>
+            <td width="14"></td>
+            <td width="14"></td>
+            <td width="14"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="hour-container"></div>
+  </div>
+  <div id="right">
+    <div id="content-scroll">
+      <div id="content-holder">
+        <div class="content-item">
+          <table  border="0" cellspacing="0">
+            <tr height="63">
+              <script>
+              showCalUp();
+              </script>
+            </tr >
+            <tr>
+              <script>
+              var activities = {"1":[{"activity_id":4,"day":1,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":4,"ShannonR":null},{"activity_id":5,"day":1,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":4,"EmmaR":4,"LanceR":3,"ShannonR":2}],"2":[{"activity_id":6,"day":2,"Leroy":1,"Emma":1,"Lance":0,"Shannon":0,"LeroyR":3,"EmmaR":4,"LanceR":0,"ShannonR":2}],"3":[{"activity_id":7,"day":3,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":4,"ShannonR":2},{"activity_id":8,"day":3,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"4":[{"activity_id":9,"day":4,"Leroy":1,"Emma":1,"Lance":1,"Shannon":0,"LeroyR":4,"EmmaR":5,"LanceR":0,"ShannonR":4}],"5":[{"activity_id":10,"day":5,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"6":[{"activity_id":11,"day":6,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":2,"ShannonR":4},{"activity_id":12,"day":6,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"7":[{"activity_id":13,"day":7,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":14,"day":7,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":5,"ShannonR":5},{"activity_id":15,"day":7,"Leroy":1,"Emma":1,"Lance":0,"Shannon":1,"LeroyR":5,"EmmaR":2,"LanceR":0,"ShannonR":2}],"8":[{"activity_id":16,"day":8,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":5,"EmmaR":4,"LanceR":3,"ShannonR":3},{"activity_id":17,"day":8,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":3,"ShannonR":3}],"9":[{"activity_id":18,"day":9,"Leroy":0,"Emma":1,"Lance":0,"Shannon":0,"LeroyR":0,"EmmaR":5,"LanceR":0,"ShannonR":3}],"10":[{"activity_id":19,"day":10,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":5,"ShannonR":3},{"activity_id":20,"day":10,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":3}],"11":[{"activity_id":21,"day":11,"Leroy":0,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":0,"EmmaR":3,"LanceR":2,"ShannonR":3},{"activity_id":22,"day":11,"Leroy":0,"Emma":1,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":4,"LanceR":4,"ShannonR":3}],"12":[{"activity_id":23,"day":12,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"13":[{"activity_id":24,"day":13,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":4,"ShannonR":4},{"activity_id":25,"day":13,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"14":[{"activity_id":26,"day":14,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"15":[{"activity_id":27,"day":15,"Leroy":1,"Emma":1,"Lance":0,"Shannon":0,"LeroyR":5,"EmmaR":4,"LanceR":0,"ShannonR":5}],"16":[{"activity_id":28,"day":16,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":3,"EmmaR":5,"LanceR":2,"ShannonR":5}],"17":[{"activity_id":29,"day":17,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":3,"ShannonR":5},{"activity_id":30,"day":17,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"18":[{"activity_id":31,"day":18,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":5,"EmmaR":4,"LanceR":3,"ShannonR":2}],"19":[{"activity_id":32,"day":19,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4},{"activity_id":33,"day":19,"Leroy":0,"Emma":1,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":2,"LanceR":2,"ShannonR":4}],"20":[{"activity_id":34,"day":20,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":2,"ShannonR":4},{"activity_id":35,"day":20,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"21":[{"activity_id":36,"day":21,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":37,"day":21,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":5,"EmmaR":4,"LanceR":3,"ShannonR":2}],"22":[{"activity_id":38,"day":22,"Leroy":1,"Emma":0,"Lance":0,"Shannon":0,"LeroyR":3,"EmmaR":0,"LanceR":0,"ShannonR":2},{"activity_id":39,"day":22,"Leroy":0,"Emma":1,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":4,"LanceR":0,"ShannonR":5}],"23":[{"activity_id":40,"day":23,"Leroy":1,"Emma":0,"Lance":0,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"24":[{"activity_id":41,"day":24,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":42,"day":24,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"25":[{"activity_id":43,"day":25,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"26":[{"activity_id":44,"day":26,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":45,"day":26,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"27":[{"activity_id":46,"day":27,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":47,"day":27,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"28":[{"activity_id":48,"day":28,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"29":[{"activity_id":49,"day":29,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"30":[{"activity_id":50,"day":30,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}]};
+              showCalDown(activities);
+              </script>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="content-slider"></div>
+  </div>
+</div>
+<script>
 $(function () {
+   var hourrows = document.createElement('tbody'),c = 24,h,row;
+   while (c){
+    
+    h = (c<13)?12-c:24-c;
+    for (var m = 0; m<4; m++){
+      if (m == 0){
+        $(hourrows).append('<tr id="h'+(24-c)+'m'+(15*m)+'">'+
+                            '<td rowspan="4">'+(h+1)+'</td>'+
+                            '<td id="c1h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '<td id="c2h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '<td id="c3h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '<td id="c4h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '</tr>'); 
+      } else {
+        $(hourrows).append('<tr id="h'+(24-c)+'m'+(15*m)+'">'+
+                            '<td id="c1h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '<td id="c2h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '<td id="c3h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '<td id="c4h'+(24-c)+'m'+(15*m)+'"></td>'+
+                            '</tr>');
+      }
+    }
+    c--;
+  }
+  var hourtable = document.createElement('table');
+  $(hourtable).append('<colgroup><col id="c0"></col><col id="c1"></col><col id="c2"></col><col id="c3"></col><col id="c4"></col></colgroup>')
+  hourtable.appendChild(hourrows);
+  $('#hour-container').append(hourtable);
+  
   $('.bubbleInfo').each(function () {
     // options
     var distance = 10;
@@ -89,139 +233,5 @@ function changeDay(day)
     $('#HourBox').attr('src', 'img/HourBox/CalendarSideBox' + day + '.png');
 }
 </script>
-<style type="text/css">
-a img { border:0; }
-@font-face {
- font-family: "Euphemia";
- src: url(img/Euphemia_UCAS_Regular_2_6_6.ttf) format("truetype");
-}
-.left { float:left; }
-.trigger { cursor:pointer; }
-.bubbleInfo {
-    position:relative;
-}
-.popup {
-    position:absolute;
-    z-index:1;
-    display:none; /* keeps the popup hidden if no JS available */
-}
-</style>
-</head>
-<body>
-
-<div id="main">
-    <div style="margin:0px auto; width:1024px; height:60px; position:relative; overflow:hidden;">
-        <table width="100%" border="0" height="60px" cellspacing="0" background="img/MenuBar.png" >
-            <tr>
-                <td width="184" rowspan="2" style="padding-top:10px"></td>
-                <td width="566" rowspan="2" style="padding-top:5px; font-size:15px; color:#999;">  <script>show();</script>   </td>   
-                <td width="93" rowspan="2" style="padding-top:0px"><a href="http://eatorgraze.com/EatorGraze/Options.html"><img src="img/CalButton.png" width="72" height="30" border="0" /></a></td>   
-                <td width="77" rowspan="2" style="padding-top:5px"><a href="http://eatorgraze.com/EatorGraze/Visions.html"><img src="img/VisionButton.png" width="57" height="30" border="0" /></a></td>   
-                <td width="94" rowspan="2" style="padding-top:5px"><a href="http://eatorgraze.com/EatorGraze/Shared.html"><img src="img/Shared.png" width="61" height="30" border="0" /></a></td>   
-            </tr>
-        </table>
-    </div>
-    <div id="left" style="background:url(img/CalendarSideBox.png);">
-        <div style="margin:0px auto; height:3.3%; position:relative; overflow:visible"></div>
-        <div  align="center" style="margin:0px auto; height:3%; position:relative; overflow:visible; font-size:15px; color:#D6D6D6;" > June </div>
-        <div style="margin:0px auto; height:2.3%; position:relative; overflow:visible">
-            <table >
-                <tr>
-                    <td width="27"></td>
-                    <td width="14"></td>
-                    <td width="14"></td>
-                    <td width="14" class="days" id="day1"><span onclick="changeDay(1);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">1</span></td>
-                    <td width="14" class="days" id="day2"><span onclick="changeDay(2);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">2</span></td>
-                    <td width="14" class="days" id="day3"><span onclick="changeDay(3);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">3</span></td>
-                    <td width="14" class="days" id="day4"><span onclick="changeDay(4);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">4</span></td>
-                    <td width="14" class="days" id="day5"><span onclick="changeDay(5);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">5</span></td>
-                </tr>
-            </table>
-        </div>
-        <div style="margin:0px auto; height:2.3%; position:relative; overflow:visible">
-            <table >
-                <tr>
-                    <td width="27"></td>
-                    <td width="14" class="days" id="day6"><span onclick="changeDay(6);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">6</span></td>
-                    <td width="14" class="days" id="day7"><span onclick="changeDay(7);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">7</span></td>
-                    <td width="14" class="days" id="day8"><span onclick="changeDay(8);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">8</span></td>
-                    <td width="14" class="days" id="day9"><span onclick="changeDay(9);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">9</span></td>
-                    <td width="14" class="days" id="day10"><span onclick="changeDay(10);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">10</span></td>
-                    <td width="14" class="days" id="day11"><span onclick="changeDay(11);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">11</span></td>
-                    <td width="14" class="days" id="day12"><span onclick="changeDay(12);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">12</span></td>
-                </tr>
-            </table>
-        </div>
-        <div style="margin:0px auto; height:2.3%; position:relative; overflow:visible">
-            <table >
-                <tr>
-                    <td width="27"></td>
-                    <td width="14" class="days" id="day13"><span onclick="changeDay(13);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">13</span></td>
-                    <td width="14" class="days" id="day14"><span onclick="changeDay(14);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">14</span></td>
-                    <td width="14" class="days" id="day15"><span onclick="changeDay(15);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">15</span></td>
-                    <td width="14" class="days" id="day16"><span onclick="changeDay(16);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">16</span></td>
-                    <td width="14" class="days" id="day17"><span onclick="changeDay(17);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">17</span></td>
-                    <td width="14" class="days" id="day18"><span onclick="changeDay(18);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">18</span></td>
-                    <td width="14" class="days" id="day19"><span onclick="changeDay(19);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">19</span></td>
-                </tr>
-            </table>
-        </div>
-        <div style="margin:0px auto; height:2.3%; position:relative; overflow:visible">
-            <table >
-                <tr>
-                    <td width="27"></td>
-                    <td width="14" class="days" id="day20"><span onclick="changeDay(20);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">20</span></td>
-                    <td width="14" class="days" id="day21"><span onclick="changeDay(21);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">21</span></td>
-                    <td width="14" class="days" id="day22"><span onclick="changeDay(22);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">22</span></td>
-                    <td width="14" class="days" id="day23"><span onclick="changeDay(23);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">23</span></td>
-                    <td width="14" class="days" id="day24" style="background:#FFF;"><span onclick="changeDay(24);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">24</span></td>
-                    <td width="14" class="days" id="day25"><span onclick="changeDay(25);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">25</span></td>
-                    <td width="14" class="days" id="day26"><span onclick="changeDay(26);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">26</span></td>
-                </tr>
-            </table>
-        </div>
-        <div style="margin:0px auto; height:2.3%; position:relative; overflow:visible">
-            <table >
-                <tr>
-                    <td width="27">
-                    </td>
-                    <td width="14" class="days" id="day27"><span onclick="changeDay(27);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">27</span></td>
-                    <td width="14" class="days" id="day28"><span onclick="changeDay(28);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">28</span></td>
-                    <td width="14" class="days" id="day29"><span onclick="changeDay(29);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">29</span></td>
-                    <td width="14" class="days" id="day30"><span onclick="changeDay(30);" style="font-size:10px; color:#333; text-decoration:none; cursor:pointer;">30</span></td>
-                    <td width="14"></td>
-                    <td width="14"></td>
-                    <td width="14"></td>
-                </tr>
-            </table>
-        </div>
-        <div style="padding-top:45px; padding-left:26px;">
-            <img src="img/HourBox/CalendarSideBox24.png" alt="" id="HourBox" />
-        </div>
-    </div>
-    <div id="right">
-        <div id="content-scroll">
-            <div id="content-holder">
-                <div class="content-item">
-                    <table  border="0" cellspacing="0">
-                        <tr height="63">
-                            <script>
-                            showCalUp();
-                            </script>
-                        </tr >
-                        <tr>
-                            <script>
-                            var activities = {"1":[{"activity_id":4,"day":1,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":4,"ShannonR":null},{"activity_id":5,"day":1,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":4,"EmmaR":4,"LanceR":3,"ShannonR":2}],"2":[{"activity_id":6,"day":2,"Leroy":1,"Emma":1,"Lance":0,"Shannon":0,"LeroyR":3,"EmmaR":4,"LanceR":0,"ShannonR":2}],"3":[{"activity_id":7,"day":3,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":4,"ShannonR":2},{"activity_id":8,"day":3,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"4":[{"activity_id":9,"day":4,"Leroy":1,"Emma":1,"Lance":1,"Shannon":0,"LeroyR":4,"EmmaR":5,"LanceR":0,"ShannonR":4}],"5":[{"activity_id":10,"day":5,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"6":[{"activity_id":11,"day":6,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":2,"ShannonR":4},{"activity_id":12,"day":6,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"7":[{"activity_id":13,"day":7,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":14,"day":7,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":5,"ShannonR":5},{"activity_id":15,"day":7,"Leroy":1,"Emma":1,"Lance":0,"Shannon":1,"LeroyR":5,"EmmaR":2,"LanceR":0,"ShannonR":2}],"8":[{"activity_id":16,"day":8,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":5,"EmmaR":4,"LanceR":3,"ShannonR":3},{"activity_id":17,"day":8,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":3,"ShannonR":3}],"9":[{"activity_id":18,"day":9,"Leroy":0,"Emma":1,"Lance":0,"Shannon":0,"LeroyR":0,"EmmaR":5,"LanceR":0,"ShannonR":3}],"10":[{"activity_id":19,"day":10,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":5,"ShannonR":3},{"activity_id":20,"day":10,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":3}],"11":[{"activity_id":21,"day":11,"Leroy":0,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":0,"EmmaR":3,"LanceR":2,"ShannonR":3},{"activity_id":22,"day":11,"Leroy":0,"Emma":1,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":4,"LanceR":4,"ShannonR":3}],"12":[{"activity_id":23,"day":12,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"13":[{"activity_id":24,"day":13,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":4,"ShannonR":4},{"activity_id":25,"day":13,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"14":[{"activity_id":26,"day":14,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"15":[{"activity_id":27,"day":15,"Leroy":1,"Emma":1,"Lance":0,"Shannon":0,"LeroyR":5,"EmmaR":4,"LanceR":0,"ShannonR":5}],"16":[{"activity_id":28,"day":16,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":3,"EmmaR":5,"LanceR":2,"ShannonR":5}],"17":[{"activity_id":29,"day":17,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":3,"ShannonR":5},{"activity_id":30,"day":17,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4}],"18":[{"activity_id":31,"day":18,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":5,"EmmaR":4,"LanceR":3,"ShannonR":2}],"19":[{"activity_id":32,"day":19,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":4},{"activity_id":33,"day":19,"Leroy":0,"Emma":1,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":2,"LanceR":2,"ShannonR":4}],"20":[{"activity_id":34,"day":20,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":2,"ShannonR":4},{"activity_id":35,"day":20,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"21":[{"activity_id":36,"day":21,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":37,"day":21,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":5,"EmmaR":4,"LanceR":3,"ShannonR":2}],"22":[{"activity_id":38,"day":22,"Leroy":1,"Emma":0,"Lance":0,"Shannon":0,"LeroyR":3,"EmmaR":0,"LanceR":0,"ShannonR":2},{"activity_id":39,"day":22,"Leroy":0,"Emma":1,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":4,"LanceR":0,"ShannonR":5}],"23":[{"activity_id":40,"day":23,"Leroy":1,"Emma":0,"Lance":0,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"24":[{"activity_id":41,"day":24,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":42,"day":24,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"25":[{"activity_id":43,"day":25,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"26":[{"activity_id":44,"day":26,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":45,"day":26,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"27":[{"activity_id":46,"day":27,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5},{"activity_id":47,"day":27,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"28":[{"activity_id":48,"day":28,"Leroy":0,"Emma":0,"Lance":0,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"29":[{"activity_id":49,"day":29,"Leroy":0,"Emma":0,"Lance":1,"Shannon":0,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}],"30":[{"activity_id":50,"day":30,"Leroy":1,"Emma":1,"Lance":1,"Shannon":1,"LeroyR":0,"EmmaR":0,"LanceR":0,"ShannonR":5}]};
-                            showCalDown(activities);
-                            </script>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div id="content-slider"></div>
-    </div>
-</div>
-
 </body>
 </html>
