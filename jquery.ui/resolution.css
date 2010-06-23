@@ -8,7 +8,7 @@ a {
 }
 header {
   margin:0px auto; 
-  width:1024px; 
+  width:100%; 
   height:60px; 
   position:relative; 
   overflow:visible;
@@ -21,7 +21,7 @@ header {
   )
 }
 
-time {
+header time {
   color: #939598;
   position: absolute;
   left: 183px;
@@ -85,17 +85,17 @@ header h1 {
   
 }
 #main {
-  width: 1024px;
+  width: 100%;
   height: 768px;
   margin: 0 auto;
 }
 #left{
-  background: url(img/CalendarSideBox.png);
+  /*background: url(img/CalendarSideBox.png);*/
   position: absolute;
   height: 708px;
   width: 183px;
   left: 0;
-  bottom: 0;
+  top: 60px;
 }
 #calendar-month-view {
   border-spacing: 0;
@@ -203,9 +203,50 @@ padding-bottom: 2px;
   background-color: transparent;
 }
 #right{
-  float: right;
-  width: 841px;
+  border-left: 1px solid rgb(189,190,192);
+  position: absolute;
+  top: 60px;
+  left: 183px;
   height: 708px;
+}
+#content th {
+  position: static;
+  border-left: 1px solid rgb(242,242,243);
+  border-right: 1px solid rgb(189,190,192);
+  background-image:-webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, rgb(242,242,243)),
+    color-stop(1, rgb(189,190,192))
+  );
+  height: 63px;
+  
+  width: 176px;
+  text-align: left;
+}
+#content thead time {
+  color: #939598;
+  display: block;
+  position: relative;
+  width: 176px;
+}
+#content thead .day-name {
+  font-size: 14px;
+  font-weight: normal;
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: 20px;
+}
+#content thead .day-number {
+  font-size: 30px;
+  
+  font-weight: normal;
+  display: inline-block;
+  position: absolute;
+  top: -10px;
+  right: 20px;
 }
 #content-slider {
     width: 841px;

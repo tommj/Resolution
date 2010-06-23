@@ -1,28 +1,53 @@
 function show()
 {
-    var aa=new Date();
-    var mon = aa.getMonth();
-    var day = aa.getDate();
-    if(mon==0) bb="Janurary";
-    else if(mon==5) bb="June";
-    bb = bb+"   "+ day +",   "+aa.getFullYear();
+	var d = new Date();
+    var day = d.getDate();
+    var bb = getMonthName()+" "+ day +", "+d.getFullYear();
     document.write(bb);
 }
-
+function getMonthName() {
+	var d = new Date();
+    var m = d.getMonth();
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    return months[m];
+}
+function getDayName(y,m,d) {
+	var date = new Date();
+	if ((y||m||d) != ("undefined"||null)){
+		str = new Array();
+		if (y != null) {
+			date.setFullYear(y);
+		}
+		if (m != null) {
+			date.setMonth(m);
+		}
+		if (d != null) {
+			date.setDate(d);
+		}
+	}
+	var dn = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+	return dn[date.getDay()];
+}
 function showCalUp()
 {
-    var t = 1;
-    var s;
+    var t = 1,s,ths="";
     for(i=1;i<31;i++)
     {	
-        document.write("<td width=\"176\" height=\"63\" background=\"img/DayImages/June" + i + ".png\" onclick=\"$('.days').attr('style', ''); $('#day" + i + "').attr('style', 'background:#FFF;'); $('#HourBox').attr('src', 'img/HourBox/CalendarSideBox" + i + ".png');\" ></td>" );
+    	ths += "<td width=\"176\" height=\"63\" background=\"img/DayImages/June" + i + ".png\" onclick=\"$('.days').attr('style', ''); $('#day" + i + "').attr('style', 'background:#FFF;'); $('#HourBox').attr('src', 'img/HourBox/CalendarSideBox" + i + ".png');\" ></td>";
     }
+    ths += '</tr><tr height="63">';
+    
+    for(i=1;i<31;i++)
+    {	
+        ths += '<th onclick="$(\'.days\').attr(\'style\', \'\'); $(\'#day' + i + '\').attr(\'style\', \'background:#FFF;\'); $(\'#HourBox\').attr(\'src\', \'img/HourBox/CalendarSideBox' + i + '.png\');"><time><span class="day-name">'+getDayName(null,null,i)+'</span><span class="day-number">'+i+'</span></time></th>';
+    }
+    $('#content thead tr').append(ths);
 }
 
 function showCalDown(activities)
 {
-    var aa=new Date();
-    var day = aa.getDate();
+    var d = new Date();
+    var day = d.getDate();
     var s;
     for(i=1;i<31;i++)
     {	
