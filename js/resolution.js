@@ -5,7 +5,7 @@ function show()
     var day = aa.getDate();
     if(mon==0) bb="Janurary";
     else if(mon==5) bb="June";
-    bb = bb+",   "+ day +",   "+aa.getFullYear();
+    bb = bb+"   "+ day +",   "+aa.getFullYear();
     document.write(bb);
 }
 
