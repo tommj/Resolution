@@ -1,572 +1,801 @@
 {
-	"1": [{
-		"activity_id": 4,
-		"activity_title":"Lunch at Tiffanys",
-		"time_start":"13:00",
-		"time_stop":"14:30",
-		"day": 1,
-		"people":{
-		    "Lance":{
-		        "rating":4,
-                "reflection":"it was soooo tasty!"
-		    },
-		    "Shannon":{
-		        "rating":4,
-                "reflection":"it was soooo tasty!"
-		    }
-		}
-	},
-
-	{
-		"activity_id": 5,
-		"day": 1,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 4,
-		"EmmaR": 4,
-		"LanceR": 3,
-		"ShannonR": 2
-	}],
-	"2": [{
-		"activity_id": 6,
-		"day": 2,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 0,
-		"Shannon": 0,
-		"LeroyR": 3,
-		"EmmaR": 4,
-		"LanceR": 0,
-		"ShannonR": 2
-	}],
-	"3": [{
-		"activity_id": 7,
-		"day": 3,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 4,
-		"ShannonR": 2
-	},
-	{
-		"activity_id": 8,
-		"day": 3,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 4
-	}],
-	"4": [{
-		"activity_id": 9,
-		"day": 4,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 4,
-		"EmmaR": 5,
-		"LanceR": 0,
-		"ShannonR": 4
-	}],
-	"5": [{
-		"activity_id": 10,
-		"day": 5,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 4
-	}],
-	"6": [{
-		"activity_id": 11,
-		"day": 6,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 2,
-		"ShannonR": 4
-	},
-	{
-		"activity_id": 12,
-		"day": 6,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"7": [{
-		"activity_id": 13,
-		"day": 7,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	},
-	{
-		"activity_id": 14,
-		"day": 7,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 5,
-		"ShannonR": 5
-	},
-	{
-		"activity_id": 15,
-		"day": 7,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 5,
-		"EmmaR": 2,
-		"LanceR": 0,
-		"ShannonR": 2
-	}],
-	"8": [{
-		"activity_id": 16,
-		"day": 8,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 5,
-		"EmmaR": 4,
-		"LanceR": 3,
-		"ShannonR": 3
-	},
-	{
-		"activity_id": 17,
-		"day": 8,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 3,
-		"ShannonR": 3
-	}],
-	"9": [{
-		"activity_id": 18,
-		"day": 9,
-		"Leroy": 0,
-		"Emma": 1,
-		"Lance": 0,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 5,
-		"LanceR": 0,
-		"ShannonR": 3
-	}],
-	"10": [{
-		"activity_id": 19,
-		"day": 10,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 5,
-		"ShannonR": 3
-	},
-	{
-		"activity_id": 20,
-		"day": 10,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 3
-	}],
-	"11": [{
-		"activity_id": 21,
-		"day": 11,
-		"Leroy": 0,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 3,
-		"LanceR": 2,
-		"ShannonR": 3
-	},
-	{
-		"activity_id": 22,
-		"day": 11,
-		"Leroy": 0,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 4,
-		"LanceR": 4,
-		"ShannonR": 3
-	}],
-	"12": [{
-		"activity_id": 23,
-		"day": 12,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 4
-	}],
-	"13": [{
-		"activity_id": 24,
-		"day": 13,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 4,
-		"ShannonR": 4
-	},
-	{
-		"activity_id": 25,
-		"day": 13,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"14": [{
-		"activity_id": 26,
-		"day": 14,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"15": [{
-		"activity_id": 27,
-		"day": 15,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 0,
-		"Shannon": 0,
-		"LeroyR": 5,
-		"EmmaR": 4,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"16": [{
-		"activity_id": 28,
-		"day": 16,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 3,
-		"EmmaR": 5,
-		"LanceR": 2,
-		"ShannonR": 5
-	}],
-	"17": [{
-		"activity_id": 29,
-		"day": 17,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 3,
-		"ShannonR": 5
-	},
-	{
-		"activity_id": 30,
-		"day": 17,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 4
-	}],
-	"18": [{
-		"activity_id": 31,
-		"day": 18,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 5,
-		"EmmaR": 4,
-		"LanceR": 3,
-		"ShannonR": 2
-	}],
-	"19": [{
-		"activity_id": 32,
-		"day": 19,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 4
-	},
-	{
-		"activity_id": 33,
-		"day": 19,
-		"Leroy": 0,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 2,
-		"LanceR": 2,
-		"ShannonR": 4
-	}],
-	"20": [{
-		"activity_id": 34,
-		"day": 20,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 2,
-		"ShannonR": 4
-	},
-	{
-		"activity_id": 35,
-		"day": 20,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"21": [{
-		"activity_id": 36,
-		"day": 21,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	},
-	{
-		"activity_id": 37,
-		"day": 21,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 5,
-		"EmmaR": 4,
-		"LanceR": 3,
-		"ShannonR": 2
-	}],
-	"22": [{
-		"activity_id": 38,
-		"day": 22,
-		"Leroy": 1,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 0,
-		"LeroyR": 3,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 2
-	},
-	{
-		"activity_id": 39,
-		"day": 22,
-		"Leroy": 0,
-		"Emma": 1,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 4,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"23": [{
-		"activity_id": 40,
-		"day": 23,
-		"Leroy": 1,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"24": [{
-		"activity_id": 41,
-		"day": 24,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	},
-	{
-		"activity_id": 42,
-		"day": 24,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"25": [{
-		"activity_id": 43,
-		"day": 25,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"26": [{
-		"activity_id": 44,
-		"day": 26,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	},
-	{
-		"activity_id": 45,
-		"day": 26,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"27": [{
-		"activity_id": 46,
-		"day": 27,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	},
-	{
-		"activity_id": 47,
-		"day": 27,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"28": [{
-		"activity_id": 48,
-		"day": 28,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 0,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"29": [{
-		"activity_id": 49,
-		"day": 29,
-		"Leroy": 0,
-		"Emma": 0,
-		"Lance": 1,
-		"Shannon": 0,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}],
-	"30": [{
-		"activity_id": 50,
-		"day": 30,
-		"Leroy": 1,
-		"Emma": 1,
-		"Lance": 1,
-		"Shannon": 1,
-		"LeroyR": 0,
-		"EmmaR": 0,
-		"LanceR": 0,
-		"ShannonR": 5
-	}]
+    "1": [
+        {
+            "activity_id": 4,
+            "activity_title": "Soccer Practice",
+            "time_start": "15:30",
+            "time_stop": "18:00",
+            "day": 1,
+            "people": {
+                "Lance": {
+                    "rating": 4,
+                    "reflection": "Coach worked us hard today" 
+                } 
+            } 
+        },
+        {
+            "activity_id": 5,
+            "activity_title": "Dinner",
+            "time_start": "18:00",
+            "time_stop": "19:00",
+            "day": 1,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "A Nice Saturday dinner. Good meatloaf." 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "Lance told us about the nice game he had this week." 
+                },
+                "Lance": {
+                    "rating": 3,
+                    "reflection": "We didn't really talk about much" 
+                },
+                "Shannon": {
+                    "rating": 2,
+                    "reflection": "I had to listen to Lance brag all night" 
+                } 
+            } 
+        } 
+    ],
+    "2": [
+        {
+            "activity_id": 6,
+            "activity_title": "Shopping",
+            "time_start": "13:00",
+            "time_stop": "16:00",
+            "day": 2,
+            "people": {
+                "Leroy": {
+                    "rating": 3,
+                    "reflection": "It was nice to spend some time with Emma" 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "We got all of the shopping done for the house - linens, cleaning supplies, and some nice vases on sale" 
+                } 
+            } 
+        } 
+    ],
+    "3": [
+        {
+            "activity_id": 7,
+            "activity_title": "Soccer Practice",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 3,
+            "people": {
+                "Lance": {
+                    "rating": 4,
+                    "reflection": "I played really hard today" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 8,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 3,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "Practice went well. No messups" 
+                } 
+            } 
+        } 
+    ],
+    "4": [
+        {
+            "activity_id": 9,
+            "activity_title": "Dinner",
+            "time_start": "18: 00",
+            "time_stop": "19: 30",
+            "day": 4,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "" 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "Lance is doing very well in school!" 
+                },
+                "Lance": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ],
+    "5": [
+        {
+            "activity_id": 10,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 5,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "We talked about school for a while. Sometimes it's nice to." 
+                } 
+            } 
+        } 
+    ],
+    "6": [
+        {
+            "activity_id": 11,
+            "activity_title": "Soccer Practice",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 6,
+            "people": {
+                "Lance": {
+                    "rating": 2,
+                    "reflection": "Coach was really angry today about something." 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 12,
+            "activity_title": "Dance Class",
+            "time_start": "18: 00",
+            "time_stop": "19: 30",
+            "day": 6,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "I did so well today! I landed perfectly every time!" 
+                } 
+            } 
+        } 
+    ],
+    "7": [
+        {
+            "activity_id": 13,
+            "activity_title": "Yearbook Club",
+            "time_start": "15: 30",
+            "time_stop": "17: 30",
+            "day": 7,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "David was so funny today!" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 14,
+            "activity_title": "Alison's Play",
+            "time_start": "18: 45",
+            "time_stop": "19: 30",
+            "day": 7,
+            "people": {
+                "Lance": {
+                    "rating": 4,
+                    "reflection": "Alison was amazing! I have the best girlfriend!" 
+                } 
+            } 
+        },
+        {
+            "activity_id": 15,
+            "activity_title": "Dinner",
+            "time_start": "19: 00",
+            "time_stop": "20: 30",
+            "day": 7,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "Best meatloaf ever!" 
+                },
+                "Emma": {
+                    "rating": 2,
+                    "reflection": "Shannon's not acting herself lately. Maybe she's stressed out." 
+                },
+                "Shannon": {
+                    "rating": 2,
+                    "reflection": "Mom and Dad ganged up on me about trying out for varsity." 
+                } 
+            } 
+        } 
+    ],
+    "8": [
+        {
+            "activity_id": 16,
+            "activity_title": "Beach",
+            "time_start": "9: 00",
+            "time_stop": "16: 00",
+            "day": 8,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "Amazing day today, the shole family got together for a trip to the beach. I haven't felt this relaxed in a long time. We need to come out here more often!" 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "A nice trip today" 
+                },
+                "Lance": {
+                    "rating": 3,
+                    "reflection": "Listened to my ipod the whole time" 
+                },
+                "Shannon": {
+                    "rating": 3,
+                    "reflection": "The sun was really weak today." 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 17,
+            "activity_title": "Bowling",
+            "time_start": "19: 00",
+            "time_stop": "23: 00",
+            "day": 8,
+            "people": {
+                "Lance": {
+                    "rating": 3,
+                    "reflection": "Kind of tiring playing with everyone. Wanted to be back home playing WoW" 
+                } 
+            } 
+        } 
+    ],
+    "9": [
+        {
+            "activity_id": 18,
+            "activity_title": "Swimming",
+            "time_start": "16: 00",
+            "time_stop": "18: 30",
+            "day": 9,
+            "people": {
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "A really nice session today… it's been so long" 
+                } 
+            } 
+        } 
+    ],
+    "10": [
+        {
+            "activity_id": 19,
+            "activity_title": "Soccer Practice",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 10,
+            "people": {
+                "Lance": {
+                    "rating": 4,
+                    "reflection": "Nailed it today! Coach says I should try out for captain next year!" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 20,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 10,
+            "people": {
+                "Shannon": {
+                    "rating": 3,
+                    "reflection": "Everyone was really tired today, so we didn't play very well." 
+                } 
+            } 
+        } 
+    ],
+    "11": [
+        {
+            "activity_id": 21,
+            "activity_title": "Shopping",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 11,
+            "people": {
+                "Emma": {
+                    "rating": 3,
+                    "reflection": "we got the shopping done" 
+                },
+                "Lance": {
+                    "rating": 1,
+                    "reflection": "I was done in twenty minutes, and had to wait for the next two hours for the ladies" 
+                },
+                "Shannon": {
+                    "rating": 3,
+                    "reflection": "we got clothes for the summer, nothing special really" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 22,
+            "activity_title": "Studying Help",
+            "time_start": "18: 30",
+            "time_stop": "21: 30",
+            "day": 11,
+            "people": {
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "Lance is really improving in his maths work" 
+                },
+                "Lance": {
+                    "rating": 4,
+                    "reflection": "Math is really hard,but Mom says I'm getting better!" 
+                } 
+            } 
+        } 
+    ],
+    "12": [
+        {
+            "activity_id": 23,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 12,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "a nice workout today" 
+                } 
+            } 
+        } 
+    ],
+    "13": [
+        {
+            "activity_id": 24,
+            "activity_title": "Soccer Practice",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 13,
+            "people": {
+                "Lance": {
+                    "rating": 4,
+                    "reflection": "Coach pushed us really hard,I'm so tired from it" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 25,
+            "activity_title": "Dance Class",
+            "time_start": "18: 00",
+            "time_stop": "19: 30",
+            "day": 13,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "Amazing, as usual!" 
+                } 
+            } 
+        } 
+    ],
+    "14": [
+        {
+            "activity_id": 26,
+            "activity_title": "Yearbook Club",
+            "time_start": "15: 30",
+            "time_stop": "17: 30",
+            "day": 14,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "I love hanging out with them!" 
+                } 
+            } 
+        } 
+    ],
+    "15": [
+        {
+            "activity_id": 27,
+            "activity_title": "Dinner",
+            "time_start": "20: 00",
+            "time_stop": "22: 00",
+            "day": 15,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "Wow, Chex Lattice is such a good restaurant! And Emma and I haven't been out alone in so long!" 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "The meat was a bit overdone,but things were good" 
+                } 
+            } 
+        } 
+    ],
+    "16": [
+        {
+            "activity_id": 28,
+            "activity_title": "Dinner and Movie",
+            "time_start": "18: 00",
+            "time_stop": "22: 00",
+            "day": 16,
+            "people": {
+                "Leroy": {
+                    "rating": 3,
+                    "reflection": "Dinner was okay, but the movie was pretty horrible. Next time I get to choose though." 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "The movie was soooo funny!" 
+                },
+                "Lance": {
+                    "rating": 1,
+                    "reflection": "Wow, I missed out on a raid for that?" 
+                },
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "lol, that movie was such a good time!" 
+                } 
+            } 
+        } 
+    ],
+    "17": [
+        {
+            "activity_id": 29,
+            "activity_title": "Soccer",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 17,
+            "people": {
+                "Lance": {
+                    "rating": 3,
+                    "reflection": "Lots of work with not too much payoff today" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 30,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 17,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "we worked on some good plays today. Brenda really improved!" 
+                } 
+            } 
+        } 
+    ],
+    "18": [
+        {
+            "activity_id": 31,
+            "activity_title": "Dinner",
+            "time_start": "18: 00",
+            "time_stop": "20: 00",
+            "day": 18,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "I opened up the grill tonight and made everyone burgers. I must say, they tasted amazing" 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "A really nice time - Leroy made burgers, and there was a really nice breeze" 
+                },
+                "Lance": {
+                    "rating": 3,
+                    "reflection": "Burgers were good, I missed half the game though" 
+                },
+                "Shannon": {
+                    "rating": 2,
+                    "reflection": "It was okay, but seeing as how I'm vegetarian now, there wasn't much for me to eat other than burgers… yuck" 
+                } 
+            } 
+        } 
+    ],
+    "19": [
+        {
+            "activity_id": 32,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 19,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "Wow, Brenda keeps getting better!" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 33,
+            "activity_title": "Studying Help",
+            "time_start": "20: 00",
+            "time_stop": "22: 30",
+            "day": 19,
+            "people": {
+                "Emma": {
+                    "rating": 2,
+                    "reflection": "I take back what I was saying about Lance. He really needs to work on it and stop playing video games" 
+                },
+                "Lance": {
+                    "rating": 1,
+                    "reflection": "Omg! Mom told me I couldn't play Warcraft for two weeks, and I need to study harder! It's not fair!" 
+                } 
+            } 
+        } 
+    ],
+    "20": [
+        {
+            "activity_id": 34,
+            "activity_title": "Soccer Practice",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 20,
+            "people": {
+                "Lance": {
+                    "rating": 2,
+                    "reflection": "Practice was ok. I can't believe I can't play Warcraft!" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 35,
+            "activity_title": "Dance Class",
+            "time_start": "18: 00",
+            "time_stop": "19: 30",
+            "day": 20,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "things are going so well for me in dance!" 
+                } 
+            } 
+        } 
+    ],
+    "21": [
+        {
+            "activity_id": 36,
+            "activity_title": "Yearbook Club",
+            "time_start": "15: 30",
+            "time_stop": "17: 30",
+            "day": 21,
+            "people": {
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "I love Yearbook Club!" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 37,
+            "activity_title": "Dinner and Movie",
+            "time_start": "18: 00",
+            "time_stop": "22: 00",
+            "day": 21,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "We had a great dinner tonight, with lots of pasta and a nice chicken cutlet." 
+                },
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "Really nice dinner, I made a yummy fruit salad" 
+                },
+                "Lance": {
+                    "rating": 3,
+                    "reflection": "Dad told his greek diner joke again" 
+                },
+                "Shannon": {
+                    "rating": 2,
+                    "reflection": "Seriously, what a drag. I could've been out eating pizza with everyone from the Yearbook Club. Lance burped in my face again." 
+                } 
+            } 
+        } 
+    ],
+    "22": [
+        {
+            "activity_id": 38,
+            "activity_title": "Meeting",
+            "time_start": "10: 00",
+            "time_stop": "13: 00",
+            "day": 22,
+            "people": {
+                "Leroy": {
+                    "rating": 3,
+                    "reflection": "At least I didn't have to wake up too early for it." 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 39,
+            "activity_title": "Shopping",
+            "time_start": "12: 00",
+            "time_stop": "14: 30",
+            "day": 22,
+            "people": {
+                "Emma": {
+                    "rating": 4,
+                    "reflection": "Got food shopping done and helped Shannon buy some nice outfits" 
+                },
+                "Shannon": {
+                    "rating": 4,
+                    "reflection": "I got the cutest three piece today!" 
+                } 
+            } 
+        } 
+    ],
+    "23": [
+        {
+            "activity_id": 40,
+            "activity_title": "The Game",
+            "time_start": "15: 30",
+            "time_stop": "17: 30",
+            "day": 23,
+            "people": {
+                "Leroy": {
+                    "rating": 4,
+                    "reflection": "Packers didn't have a chance!" 
+                } 
+            } 
+        } 
+    ],
+    "24": [
+        {
+            "activity_id": 41,
+            "activity_title": "Soccer Practice",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 24,
+            "people": {
+                "Lance": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 42,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 24,
+            "people": {
+                "Shannon": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ],
+    "25": [
+        {
+            "activity_id": 43,
+            "activity_title": "Test",
+            "time_start": "10: 45",
+            "time_stop": "11: 30",
+            "day": 25,
+            "people": {
+                "Lance": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ],
+    "26": [
+        {
+            "activity_id": 44,
+            "activity_title": "Field Hockey Practice",
+            "time_start": "16: 00",
+            "time_stop": "18: 00",
+            "day": 26,
+            "people": {
+                "Shannon": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 45,
+            "activity_title": "Dinner and Movie",
+            "time_start": "18: 00",
+            "time_stop": "20: 00",
+            "day": 26,
+            "people": {
+                "Leroy": {
+                    "rating": null,
+                    "reflection": "" 
+                },
+                "Emma": {
+                    "rating": null,
+                    "reflection": "" 
+                },
+                "Lance": {
+                    "rating": null,
+                    "reflection": "" 
+                },
+                "Shannon": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ],
+    "27": [
+        {
+            "activity_id": 46,
+            "activity_title": "Soccer Practice",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 27,
+            "people": {
+                "Lance": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } ,
+        {
+            "activity_id": 47,
+            "activity_title": "Dance Class",
+            "time_start": "18: 00",
+            "time_stop": "19: 30",
+            "day": 27,
+            "people": {
+                "Shannon": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ],
+    "28": [
+        {
+            "activity_id": 48,
+            "activity_title": "Yearbook Club",
+            "time_start": "15: 30",
+            "time_stop": "17: 30",
+            "day": 28,
+            "people": {
+                "Shannon": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ],
+    "29": [
+        {
+            "activity_id": 49,
+            "activity_title": "WoW",
+            "time_start": "15: 30",
+            "time_stop": "18: 00",
+            "day": 29,
+            "people": {
+                "Lance": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ],
+    "30": [
+        {
+            "activity_id": 50,
+            "activity_title": "Lunch with Uncle, Aunt",
+            "time_start": "12: 00",
+            "time_stop": "16: 00",
+            "day": 30,
+            "people": {
+                "Leroy": {
+                    "rating": null,
+                    "reflection": "" 
+                },
+                "Emma": {
+                    "rating": null,
+                    "reflection": "" 
+                },
+                "Lance": {
+                    "rating": null,
+                    "reflection": "" 
+                },
+                "Shannon": {
+                    "rating": null,
+                    "reflection": "" 
+                } 
+            } 
+        } 
+    ] 
 }
